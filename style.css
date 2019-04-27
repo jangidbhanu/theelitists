@@ -95,6 +95,14 @@ li a:hover {
     color: #0c2b4c;
     border-radius: 10px;
 }  
+.cons {
+    top: 3700px;
+    left: 0;
+    text-align: justify;
+    margin-left: 50px;
+    margin-right: 50px;
+    position: absolute;
+}
 .p1 {
     margin-left: 45%;
     position: absolute;
@@ -184,12 +192,15 @@ li a:hover {
 
 #footer { 
 	clear:both;
-	height: 43px;
- color:#ccc;  
+    color:#ccc;  
 	background: #000 url(footer.jpg) top no-repeat; 
 	font-size:90%; 
     padding: 0; 
-    
+    position: absolute;
+    top: 3900px;
+    height: 80px;
+    width: 100%;
+    left: 0;
 	text-align:center; 
 }
 
@@ -206,21 +217,6 @@ li a:hover {
 
 
 
-
-
-
-
-
-@font-face {
-    font-family: Poppins-Regular;
-    src: url('../fonts/poppins/Poppins-Regular.ttf'); 
-  }
-  
-  @font-face {
-    font-family: Poppins-Bold;
-    src: url('../fonts/poppins/Poppins-Bold.ttf'); 
-  }
-  
   * {
       margin: 0px; 
       padding: 0px; 
@@ -382,7 +378,7 @@ li a:hover {
   }
   
   .row .cell {
-    font-family: Poppins-Regular;
+    font-family: open sans;
     font-size: 15px;
     color: #666666;
     line-height: 1.2;
@@ -394,7 +390,7 @@ li a:hover {
   }
   
   .row.header .cell {
-    font-family: Poppins-Regular;
+    font-family: open sans;
     font-size: 18px;
     color: #fff;
     line-height: 1.2;
@@ -451,7 +447,7 @@ li a:hover {
     }
     
     .row .cell {
-      font-family: Poppins-Regular;
+      font-family: open sans;
       font-size: 18px;
       color: #555555;
       line-height: 1.2;
