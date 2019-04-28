@@ -12,5 +12,7 @@ $(function() {
 
 function menu() {
     $(".listmenu").toggleClass('menu');
+    $(".line").css('color','#701e0f');
+    $(".caps").css('color','#701e0f');
 
 }

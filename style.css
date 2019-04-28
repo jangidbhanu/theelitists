@@ -578,6 +578,18 @@ iframe {
         margin: 20px;
     }
 
+    .line {
+        font-size: 20px;
+        
+    }
+    .line p{
+        top: 220px;
+    }
+    .caps {
+        font-size: 30px;
+    }
+
+
     #footer {
         top: 5600px;
     }
