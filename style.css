@@ -33,7 +33,6 @@ html, body {
 }
 
 .line {
-    
     margin-top: 140px;
     margin-left: 45px;
     font-family: Nunito;
@@ -41,7 +40,8 @@ html, body {
     text-align: left;
     color: white;
 }
-.line p{
+
+.line p {
     position: absolute;
     top: 160px;
     left: 50%;
@@ -474,28 +474,28 @@ iframe {
 }
 
 @media (max-width: 480px) {
-    .name{
+    .name {
         position: absolute;
         font-size: 32px;
-        left:-10px;
-        top:22px;
+        left: -10px;
+        top: 22px;
     }
     .navbar .icon {
         position: absolute;
-        right:0;
-        top:0;
+        right: 0;
+        top: 0;
         margin-top: 20px;
         margin-right: 30px;
         display: block;
     }
     .navbar .icon {
-        color:#fff;
+        color: #fff;
     }
     .navbar .listmenu {
         z-index: 1000;
         height: 0px;
         padding-top: 50px;
-        background-color:#701e0f; 
+        background-color: #701e0f;
     }
     .navbar .listmenu li {
         float: none;
@@ -504,8 +504,81 @@ iframe {
     .navbar .listmenu li a {
         text-align: right;
     }
-
-    .navbar .menu{
+    .navbar .menu {
         height: auto;
+    }
+    .h2 {
+        font-size: 15px;
+    }
+    .newpara {
+        padding: 16px;
+        margin-left: 5px;
+        margin-top: 30px;
+        margin-right: 5px;
+    }
+    .p1 {
+        top: 1150px;
+        font-size: 15px;
+        margin: 20px;
+        left: 0;
+    }
+    .d1 {
+        width: 100%;
+        height: 25%;
+        top: 950px;
+        left: 0;
+        border-radius: 0%;
+        margin-right: 10px;
+    }
+    .p2 {
+        top: 1550px;
+        left: 0;
+        font-size: 15px;
+        margin: 20px;
+    }
+    .d2 {
+        top: 1350px;
+        width: 100%;
+        height: 25%;
+        left: 0;
+        border-radius: 0%;
+        margin-right: 10px;
+    }
+    .p3 {
+        top: 2200px;
+        left: 0;
+        font-size: 15px;
+        margin: 20px;
+    }
+    .d3 {
+        top: 1870px;
+        width: 100%;
+        height: 40%;
+        left: 0;
+        border-radius: 0%;
+        margin-right: 10px;
+    }
+    .p4 {
+        top: 2700px;
+        left: 0;
+        font-size: 15px;
+        margin: 20px;
+
+    }
+    .d4 {
+        top: 2500px;
+        width: 100%;
+        height: 25%;
+        left: 0;
+        border-radius: 0%;
+        margin-right: 10px;
+    }
+    .cons {
+        top: 5000px;
+        margin: 20px;
+    }
+
+    #footer {
+        top: 5600px;
     }
 }
