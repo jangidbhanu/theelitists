@@ -1,18 +1,25 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Rammetto+One');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900');
 html, body {
     padding: 0;
     margin: 0;
 }
 
+body {
+    background: beige;
+}
+
 .name {
-    font-family: open sans;
+    font-family: Playfair Display SC;
     font-size: 50px;
     position: absolute;
     text-align: left;
-    color: #fff;
-    top: 60px;
-    margin-left: 45px;
+    color: white;
+    top: 70px;
+    margin-left: 130px;
 }
 
 .cover {
@@ -20,9 +27,9 @@ html, body {
     height: 100vh;
     background-image: url("bg.jpg");
     background-size: cover;
-    /* background-attachment: fixed;
+    background-attachment: fixed;
     background-position: center;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     padding-bottom: 30px;
 }
 
@@ -35,7 +42,7 @@ html, body {
 .line {
     margin-top: 140px;
     margin-left: 45px;
-    font-family: Nunito;
+    font-family: raleway;
     font-size: 25px;
     text-align: left;
     color: white;
@@ -43,7 +50,7 @@ html, body {
 
 .line p {
     position: absolute;
-    top: 160px;
+    top: 360px;
     left: 50%;
     margin-left: -40%;
 }
@@ -66,17 +73,21 @@ html, body {
 }
 
 .navbarscrolled {
-    background-color: #701e0f !important;
+    background-color: #0e447a !important;
     transition: background-color 200ms linear;
     position: sticky;
     color: white;
+    z-index: 1001;
+    background-color: #3b8cc4;
 }
 
 .navbarscrolled:hover {
-    background-color: #701e0f !important;
+    background-color: black !important;
     transition: background-color 200ms linear;
     position: sticky;
-    color: white;
+    color: black;
+    background-color: #3b8cc4;
+    transform: translateY(-5px);
 }
 
 .navbar ul {
@@ -84,6 +95,7 @@ html, body {
     margin-top: 1px;
     padding: 10px;
     overflow: hidden;
+    
 }
 
 .navbar li {
@@ -92,10 +104,10 @@ html, body {
 
 .navbar li a {
     display: block;
-    color: white;
+    color: #e5e6e8;
     font-size: 15px;
     text-align: center;
-    font-family: open sans;
+    font-family: raleway;
     padding: 14px 16px;
     text-decoration: none;
     border-radius: 10px;
@@ -103,7 +115,8 @@ html, body {
 }
 
 .navbar li a:hover {
-    color: black;
+    color: white;
+    transform: translateY(-5px);
     transition: background-color 200ms linear;
 }
 
@@ -113,14 +126,14 @@ html, body {
     margin-top: 30px;
     margin-right: 135px;
     text-align: center;
-    font-family: open sans;
+    font-family: raleway;
     background-color: white;
     color: #0c2b4c;
     border-radius: 10px;
 }
 
 .cons {
-    top: 3700px;
+    top: 2000px;
     left: 0;
     text-align: justify;
     margin-left: 200px;
@@ -129,13 +142,15 @@ html, body {
 }
 
 .p1 {
-    margin-left: 45%;
+    left: 0;
     position: absolute;
-    font-size: 20px;
-    top: 950px;
+    font-size: 16px;
+    top: 750px;
+    width: 60%;
     text-align: justify;
     font-weight: 100;
-    margin-right: 25px;
+    margin-left: 20%;
+    margin-right: 10%;
 }
 
 .d1 {
@@ -143,19 +158,23 @@ html, body {
     background-size: cover;
     position: absolute;
     border-radius: 15px;
-    width: 45%;
-    height: 80%;
+    width: 30%;
+    height: 40%;
+    display: none;
     left: 50px;
     top: 800px;
 }
 
 .p2 {
-    margin-right: 52%;
+    left: 0;
     position: absolute;
-    top: 1450px;
-    left: 50px;
-    font-size: 20px;
+    font-size: 16px;
+    top: 850px;
+    width: 60%;
     text-align: justify;
+    font-weight: 100;
+    margin-left: 20%;
+    margin-right: 10%;
 }
 
 .d2 {
@@ -170,13 +189,15 @@ html, body {
 }
 
 .p3 {
-    margin-left: 45%;
+    left: 0;
     position: absolute;
-    font-size: 20px;
-    top: 2000px;
+    font-size: 16px;
+    top: 1000px;
+    width: 60%;
     text-align: justify;
     font-weight: 100;
-    margin-right: 25px;
+    margin-left: 20%;
+    margin-right: 10%;
 }
 
 .d3 {
@@ -191,12 +212,15 @@ html, body {
 }
 
 .p4 {
-    margin-right: 52%;
+    left: 0;
     position: absolute;
-    top: 2550px;
-    left: 50px;
-    font-size: 20px;
+    font-size: 16px;
+    top: 1120px;
+    width: 60%;
     text-align: justify;
+    font-weight: 100;
+    margin-left: 20%;
+    margin-right: 10%;
 }
 
 .d4 {
@@ -209,9 +233,24 @@ html, body {
     right: 50px;
     top: 2450px;
 }
+.b1 {
+    color: wheat;
+    font-size: 15px;
+    background: #0e447a;
+    border-radius: 10px;
+    padding: 4px 6px;
+
+}
+.parag {
+    background-color: black;
+}
 
 .h2 {
-    color: #701e0f;
+    color: white;
+    font-family: raleway;
+
+    background: #0e447a;
+    padding: 14px 16px;
 }
 
 #footer {
@@ -221,7 +260,7 @@ html, body {
     font-size: 90%;
     padding: 0;
     position: absolute;
-    top: 4110px;
+    top: 2400px;
     height: 90px;
     width: 100%;
     left: 0;
@@ -311,7 +350,7 @@ iframe {
 .limiter {
     width: 100%;
     margin: 0 auto;
-    top: 3000px;
+    top: 1300px;
     left: 0;
     position: absolute;
 }
@@ -319,7 +358,7 @@ iframe {
 .container-table100 {
     width: 100%;
     min-height: 100vh;
-    background: #f7c9a5;
+    background: #e3e4e5;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-box;
@@ -356,7 +395,7 @@ iframe {
 
 .row.header {
     color: #ffffff;
-    background: #701e0f;
+    background: #0e447a;
 }
 
 @media screen and (max-width: 768px) {
@@ -371,7 +410,7 @@ iframe {
         display: none;
     }
     .row .cell:before {
-        font-family: Poppins-Bold;
+        font-family: raleway;
         font-size: 12px;
         color: #808080;
         line-height: 1.2;
@@ -395,7 +434,7 @@ iframe {
 }
 
 .row .cell {
-    font-family: open sans;
+    font-family: raleway;
     font-size: 15px;
     color: #666666;
     line-height: 1.2;
@@ -406,7 +445,7 @@ iframe {
 }
 
 .row.header .cell {
-    font-family: open sans;
+    font-family: raleway;
     font-size: 18px;
     color: #fff;
     line-height: 1.2;
@@ -459,7 +498,7 @@ iframe {
         padding-left: 30px;
     }
     .row .cell {
-        font-family: open sans;
+        font-family: raleway;
         font-size: 18px;
         color: #555555;
         line-height: 1.2;
@@ -500,7 +539,6 @@ iframe {
     }
     .navbarscrolled {
         background-color: #701e0f !important;
-        
     }
     .navbar .listmenu li {
         float: none;
@@ -568,7 +606,6 @@ iframe {
         left: 0;
         font-size: 15px;
         margin: 20px;
-
     }
     .d4 {
         top: 2500px;
@@ -582,19 +619,15 @@ iframe {
         top: 5000px;
         margin: 20px;
     }
-
     .line {
         font-size: 20px;
-        
     }
-    .line p{
+    .line p {
         top: 220px;
     }
     .caps {
         font-size: 30px;
     }
-
-
     #footer {
         top: 5600px;
     }
