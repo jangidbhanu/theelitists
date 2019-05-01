@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Rammetto+One');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
 html, body {
     padding: 0;
     margin: 0;
@@ -14,17 +15,17 @@ body {
 
 .name {
     font-family: Playfair Display SC;
-    font-size: 50px;
+    font-size: 48px;
     position: absolute;
     text-align: left;
     color: white;
     top: 70px;
-    margin-left: 130px;
+    margin-left: 150px;
 }
 
 .cover {
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     background-image: url("bg.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -44,15 +45,15 @@ body {
     margin-left: 45px;
     font-family: raleway;
     font-size: 25px;
-    text-align: left;
+    text-align: right;
     color: white;
 }
 
 .line p {
     position: absolute;
-    top: 360px;
-    left: 50%;
-    margin-left: -40%;
+    top: 180px;
+    right: 50%;
+    margin-right: -38%;
 }
 
 /* .overlay{
@@ -87,7 +88,7 @@ body {
     position: sticky;
     color: black;
     background-color: #3b8cc4;
-    transform: translateY(-5px);
+  
 }
 
 .navbar ul {
@@ -107,7 +108,7 @@ body {
     color: #e5e6e8;
     font-size: 15px;
     text-align: center;
-    font-family: raleway;
+    font-family: ubuntu;
     padding: 14px 16px;
     text-decoration: none;
     border-radius: 10px;
@@ -116,7 +117,7 @@ body {
 
 .navbar li a:hover {
     color: white;
-    transform: translateY(-5px);
+    transform: translateY(-1px);
     transition: background-color 200ms linear;
 }
 
@@ -126,14 +127,14 @@ body {
     margin-top: 30px;
     margin-right: 135px;
     text-align: center;
-    font-family: raleway;
+    font-family: ubuntu;
     background-color: white;
     color: #0c2b4c;
     border-radius: 10px;
 }
 
 .cons {
-    top: 2000px;
+    top: 1700px;
     left: 0;
     text-align: justify;
     margin-left: 200px;
@@ -145,7 +146,7 @@ body {
     left: 0;
     position: absolute;
     font-size: 16px;
-    top: 750px;
+    top: 450px;
     width: 60%;
     text-align: justify;
     font-weight: 100;
@@ -169,7 +170,7 @@ body {
     left: 0;
     position: absolute;
     font-size: 16px;
-    top: 850px;
+    top: 550px;
     width: 60%;
     text-align: justify;
     font-weight: 100;
@@ -192,7 +193,7 @@ body {
     left: 0;
     position: absolute;
     font-size: 16px;
-    top: 1000px;
+    top: 700px;
     width: 60%;
     text-align: justify;
     font-weight: 100;
@@ -215,7 +216,7 @@ body {
     left: 0;
     position: absolute;
     font-size: 16px;
-    top: 1120px;
+    top: 820px;
     width: 60%;
     text-align: justify;
     font-weight: 100;
@@ -260,7 +261,7 @@ body {
     font-size: 90%;
     padding: 0;
     position: absolute;
-    top: 2400px;
+    top: 2100px;
     height: 90px;
     width: 100%;
     left: 0;
@@ -350,7 +351,7 @@ iframe {
 .limiter {
     width: 100%;
     margin: 0 auto;
-    top: 1300px;
+    top: 1000px;
     left: 0;
     position: absolute;
 }
