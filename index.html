@@ -10,32 +10,668 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Rammetto+One');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Lobster+Two&display=swap');
+
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #eaeaea;
+}
+
+.name {
+    font-family: Playfair Display SC;
+    font-size: 36px;
+    
+    position: absolute;
+    text-align: left;
+    color: white;
+    top: 100px;
+    margin-left: 50px;
+}
+
+.cover {
+    width: 100%;
+    height: 90vh;
+    background-image: url("bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 30px;
+}
+
+.caps {
+    font-family: Lobster;
+    font-size: 35px;
+    color: white;
+}
+
+.line {
+    background-color: #808080;
+    margin-top: 140px;
+    margin-left: 45px;
+    font-family: raleway;
+    font-size: 25px;
+    text-align: right;
+    color: white;
+}
+
+.line p {
+    position: absolute;
+    top: 380px;
+    font-family: Lobster;
+    right: 50%;
+    font-size: 30px;
+    margin-right: -38%;
+}
+
+/* .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+} */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: transparent;
+    transition: background-color 200ms linear;
+}
+
+.navbarscrolled {
+    background-color: #0e447a !important;
+    transition: background-color 200ms linear;
+    position: sticky;
+    color: white;
+    z-index: 1001;
+    background-color: #3b8cc4;
+}
+
+.navbarscrolled:hover {
+    background-color: black !important;
+    transition: background-color 200ms linear;
+    position: sticky;
+    color: black;
+    background-color: #3b8cc4;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin-top: 1px;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: right;
+}
+
+.navbar li a {
+    display: block;
+    color: #e5e6e8;
+    font-size: 15px;
+    text-align: center;
+    font-family: ubuntu;
+    padding: 14px 16px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 200ms linear;
+}
+
+.navbar li a:hover {
+    color: white;
+    transform: translateY(-1px);
+    transition: background-color 200ms linear;
+}
+
+.newpara {
+    padding: 0px;
+    margin-left: 135px;
+    margin-top: 30px;
+    margin-right: 135px;
+    text-align: center;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.55);
+    font-family: ubuntu;
+    background-color: white;
+    color: #0c2b4c;
+    border-radius: 10px;
+}
+
+.cons {
+    top: 1700px;
+    left: 0;
+    text-align: justify;
+    margin-left: 200px;
+    margin-right: 200px;
+    position: absolute;
+}
+
+.p1 {
+    left: 0;
+    position: absolute;
+    font-size: 16px;
+    top: 750px;
+    width: 60%;
+    text-align: justify;
+    font-weight: 100;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.d1 {
+    background-image: url(n1.jpg);
+    background-size: cover;
+    position: absolute;
+    border-radius: 15px;
+    width: 30%;
+    height: 40%;
+    display: none;
+    left: 50px;
+    top: 800px;
+}
+
+.p2 {
+    left: 0;
+    position: absolute;
+    font-size: 16px;
+    top: 850px;
+    width: 60%;
+    text-align: justify;
+    font-weight: 100;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.d2 {
+    background-image: url(d2.jpg);
+    background-size: cover;
+    position: absolute;
+    border-radius: 15px;
+    width: 45%;
+    height: 80%;
+    right: 50px;
+    top: 1350px;
+}
+
+.p3 {
+    left: 0;
+    position: absolute;
+    font-size: 16px;
+    top: 1050px;
+    width: 60%;
+    text-align: justify;
+    font-weight: 100;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.d3 {
+    background-image: url(d3.jpg);
+    background-size: cover;
+    position: absolute;
+    border-radius: 15px;
+    width: 45%;
+    height: 80%;
+    left: 50px;
+    top: 1900px;
+}
+
+.p4 {
+    left: 0;
+    position: absolute;
+    font-size: 16px;
+    top: 1270px;
+    width: 60%;
+    text-align: justify;
+    font-weight: 100;
+    margin-left: 20%;
+    margin-right: 10%;
+}
+
+.d4 {
+    background-image: url(d4.jpg);
+    background-size: cover;
+    position: absolute;
+    border-radius: 15px;
+    width: 45%;
+    height: 80%;
+    right: 50px;
+    top: 2450px;
+}
+
+.b1 {
+    color: wheat;
+    font-size: 15px;
+    background: #0e447a;
+    border-radius: 10px;
+    padding: 4px 6px;
+}
+
+.parag {
+    background-color: black;
+}
+
+.h2 {
+    color: white;
+    font-family: 'Times New Roman';
+    background: #0e447a;
+    padding: 14px 16px;
+}
+
+#footer {
+    clear: both;
+    color: #ccc;
+    background: #000 top no-repeat;
+    font-size: 90%;
+    padding: 0;
+    position: absolute;
+    top: 2300px;
+    height: 90px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+}
+
+#footer .padding {
+    padding: 10px 0px 0px 0px;
+}
+
+#footer .right {
+    float: right;
+    clear: right;
+    text-align: right;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+a {
+    margin: 0px;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+a:focus {
+    outline: none !important;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* ------------------------------------ */
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+ul, li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+/* ------------------------------------ */
+
+input {
+    display: block;
+    outline: none;
+    border: none !important;
+}
+
+textarea {
+    display: block;
+    outline: none;
+}
+
+textarea:focus, input:focus {
+    border-color: transparent !important;
+}
+
+/* ------------------------------------ */
+
+button {
+    outline: none !important;
+    border: none;
+    background: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+iframe {
+    border: none !important;
+}
+
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+    top: 1000px;
+    left: 0;
+    position: absolute;
+}
+
+.container-table100 {
+    width: 100%;
+    min-height: 100vh;
+    background: #e3e4e5;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+}
+
+.wrap-table100 {
+    width: 960px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table {
+    width: 100%;
+    display: table;
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .table {
+        display: block;
+    }
+}
+
+.row {
+    display: table-row;
+    background: #fff;
+}
+
+.row.header {
+    color: #ffffff;
+    background: #0e447a;
+}
+
+@media screen and (max-width: 768px) {
+    .row {
+        display: block;
+    }
+    .row.header {
+        padding: 0;
+        height: 0px;
+    }
+    .row.header .cell {
+        display: none;
+    }
+    .row .cell:before {
+        font-family: raleway;
+        font-size: 12px;
+        color: #808080;
+        line-height: 1.2;
+        text-transform: uppercase;
+        font-weight: unset !important;
+        margin-bottom: 13px;
+        content: attr(data-title);
+        min-width: 98px;
+        display: block;
+    }
+}
+
+.cell {
+    display: table-cell;
+}
+
+@media screen and (max-width: 768px) {
+    .cell {
+        display: block;
+    }
+}
+
+.row .cell {
+    font-family: raleway;
+    font-size: 15px;
+    color: #666666;
+    line-height: 1.2;
+    font-weight: unset !important;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.row.header .cell {
+    font-family: raleway;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: unset !important;
+    padding-top: 19px;
+    padding-bottom: 19px;
+}
+
+.row .cell:nth-child(1) {
+    width: 360px;
+    padding-left: 40px;
+}
+
+.row .cell:nth-child(2) {
+    width: 160px;
+}
+
+.row .cell:nth-child(3) {
+    width: 250px;
+}
+
+.row .cell:nth-child(4) {
+    width: 190px;
+}
+
+.table, .row {
+    width: 100% !important;
+}
+
+.row:hover {
+    background-color: #ececff;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .row {
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 18px;
+        padding-top: 30px;
+        padding-right: 15px;
+        margin: 0;
+    }
+    .row .cell {
+        border: none;
+        padding-left: 30px;
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    .row .cell:nth-child(1) {
+        padding-left: 30px;
+    }
+    .row .cell {
+        font-family: raleway;
+        font-size: 18px;
+        color: #555555;
+        line-height: 1.2;
+        font-weight: unset !important;
+    }
+    .table, .row, .cell {
+        width: 100% !important;
+    }
+}
+
+.navbar .icon {
+    display: none;
+}
+
+@media (max-width: 480px) {
+    .limiter {
+        top: 1900px;
+    
+    }
+    .name {
+        position: absolute;
+        font-size: 32px;
+        left: -10px;
+        top: 22px;
+    }
+    .navbar .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin-top: 20px;
+        margin-right: 30px;
+        display: block;
+    }
+    .navbar .icon {
+        color: #fff;
+    }
+    .navbar .listmenu {
+        z-index: 1000;
+        height: 0px;
+        padding-top: 50px;
+        background-color: #0e447a;
+    }
+    .navbarscrolled {
+        background-color: #701e0f !important;
+    }
+    .navbar .listmenu li {
+        float: none;
+        display: block;
+    }
+    .navbar .listmenu li a {
+        text-align: right;
+    }
+    .navbar .menu {
+        height: auto;
+    }
+    .h2 {
+        font-size: 15px;
+    }
+    .newpara {
+        padding: 16px;
+        margin-left: 5px;
+        margin-top: 30px;
+        margin-right: 5px;
+    }
+    .p1 {
+        top: 550px;
+        font-size: 15px;
+        margin: 90px;
+        left: 0;
+    }
+    .d1 {
+        width: 100%;
+        height: 25%;
+        top: 950px;
+        left: 0;
+        border-radius: 0%;
+        margin-right: 10px;
+    }
+    .p2 {
+        top: 800px;
+        left: 0;
+        font-size: 15px;
+        margin: 90px;
+    }
+    .d2 {
+        top: 1350px;
+        width: 100%;
+        height: 25%;
+        left: 0;
+        border-radius: 0%;
+        margin-right: 10px;
+    }
+    .p3 {
+        top: 1200px;
+        left: 0;
+        font-size: 15px;
+        margin: 90px;
+    }
+    .d3 {
+        top: 1470px;
+        width: 100%;
+        height: 30%;
+        left: 0;
+        border-radius: 0%;
+        margin-right: 10px;
+    }
+    .p4 {
+        top: 1550px;
+        left: 0;
+        font-size: 15px;
+        margin: 90px;
+    }
+    .d4 {
+        top: 2500px;
+        width: 100%;
+        height: 25%;
+        left: 0;
+        border-radius: 0%;
+        margin-right: 10px;
+    }
+    .cons {
+        top: 4000px;
+        margin: 20px;
+    }
+    .line {
+        font-size: 20px;
+    }
+    .line p {
+        top: 220px;
+    }
+    .caps {
+        font-size: 30px;
+    }
+    #footer {
+        top: 4600px;
+    }
+}
+    </style>
 </head>
 
 <body>
     <div class="cover">
         <div class="navbar">
-            <ul class="listmenu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#news">About Us</a></li>
-                <li><a href="#contact">Business Model</a></li>
-                <li><a href="#home">Industry Expertise & Coverage</a></li>
-                <li><a href="#home">Service Clusters</a></li>
-                <li><a href="#home">Carriers</a></li>
-                <li><a href="#home">Contact us</a></li>
-                <a href="javascript:void(0);" class="icon" onclick="menu()"><i class="fa fa-bars"></i></a>
-            </ul>
+            
         </div>
 
-        <h3 class="name">The Elitists</h3>
+        <h3 class="name">Campus Ambassador</h3>
         <div class="line">
             <p>
-                <span class="caps">S</span>trategic&nbsp <span class="caps">B</span>usiness&nbsp&nbsp <span
-                    class="caps">O</span>utcome&nbsp&nbsp &<br> <span class="caps">G</span>rowth&nbsp&nbsp
-                <span class="caps">A</span>ccelerators<br>
-                <span class="caps">I</span>nnovative&nbsp&nbsp <span class="caps">R</span>etained&nbsp&nbsp <span
-                    class="caps">E</span>xecutive&nbsp&nbsp <span class="caps">S</span>earch
+                <span class="caps">"L</span>earn&nbsp <span class="caps">T</span>oday&nbsp&nbsp <br><span
+                    class="caps">L</span>ead&nbsp&nbsp <span class="caps">T</span>omorrow<span class="caps">"</span>&nbsp&nbsp
+                
+                
             </p>
         </div>
 
@@ -43,186 +679,59 @@
 
     <div class="newpara">
         <h2 class="h2">
-            THE ELITISTS - INNOVATIVE RETAINED EXECUTIVE SEARCH - AN INTRODUCTION
+            AWESOME FIRMS - CAMPUS AMBASSADOR PROGRAM
 
         </h2>
         <!-- <div class="d1"></div> -->
         <div class="parag">
             <p class="p1">
-                Across the United States, United Kingdom, Continental Europe, Singapore, Hong Kong & India, an
-                estimated,
-                over 15000 executive search firms exist. From a search focus perspective, while The Elitists is
-                positioned
-                amongst the Top 1% of the best in class
-                retained executive search firms, our business model is radically different & currently unique.
+                Awesome Firms, an IIM alumni venture, is a leadership development platform that helps ambitious high performers become future leaders in their chosen areas.
 
             </p>
             <!-- <div class="d2"></div> -->
             <p class="p2">
-                Operating at the highest end of the strategic talent acquisition consulting value chain, The Elitists,
-                an
-                IIM Alumni venture started over a decade ago, (IIM’s are India’s equivalent of the Ivy League
-                Institutions)
-                is an ultra exclusive, select client
-                & executive talent focussed, relationships, metrics & results driven, pure play, super specialist,
-                strategic
-                business outcome/growth accelerator, providing world class organizations open to innovative approaches
-                in
-                executive talent acquisition
-                & exceptional, consistent Top quartile performance track record demonstrated, proven Executive Talent
-                open
-                to exploring exceptional career opportunities, unique benefits.
+                <strong>Apply for Student Ambassador :</strongA></strong><br><br>
+                The Awesome Firms student Ambassador Program recognizes hard-working, motivated and enthusiastic individuals by giving them the opportunity to represent Awesome Firms on their university campus. Awesome Firms Student Ambassadors are current students who act as a link between the University and the outside world. They use their own experiences to give people in University life an idea of what it is like to be associate oneself beyond the university life and gives a sneak peek into the world of industry at larger view.
+                
 
             </p>
 
             <!-- <div class="d3"></div> -->
             <p class="p3">
-                Harmoniously blending an extensive, hard to access, proprietary, strategic talent analytics platform & a
-                superior consulting delivery approach with a stringently sifted, Executive Talent relationship network
-                of
-                several thousand executives (15+ nationalities,
-                30+ industries,primarily spread across USA, UK, India, Singapore & HK) built over several years, The
-                Elitists helps its clients accelerate accomplishing explicit strategic business outcomes/growth &
-                executive
-                candidates accelerate their velocity
-                (Speed & Direction) of success.
+               <strong> Student Ambassadors play a vital support role such as:</strong><br><br>
+                •	Leading & representing the college campus to the industry, and shoulder the responsibility of making this planet a better and a smarter place!<br><br>
+                •	Sharing their experiences with students and motivating them to be part of the venture on various activities.
+                This program also provides the Student Ambassador with an excellent opportunity to gain valuable work experience and sharpen your skills such as communication, collaboration, team work and working with specialists in the field of Leadership Development, we feel in today's collaborative environment, there needs to be a platform where like minds can come together on a common forum to discuss, debate, and exchange ideas on various tools and strategies.
             </p>
             <!-- <div class="d4"></div> -->
             <p class="p4">
-                Partnering across The Americas, UK & Asia in a high touch, high impact, insights directed, outcome based
-                model, delivered through its offices in New York & Chennai, the exceptional, relationship network of The
-                Elitists primarily comprises senior, accomplished
-                business leaders at the following levels :- (Annual Gross Compensation(AGC) including On Target Earnings
-                (OTE) in US Dollars($)) :-
+                <br><br><strong>What Awesome Firms has planned for you?</strong><br><br>
+•	Develop valuable leadership, communication and project management skills.<br><br>
+•	Start to grow your professional network.<br><br>
+•	See your creativity, innovation and BIG ideas come to fruition on campus.<br><br>
+•	Be an integral part of campus spirit, learning and information-sharing.<br><br>
+•	A opportunity to work closely with a person having 22 years of experience in the field of entrepreneurship and start-up and explore it’s depths. <br><br>
+•	Many special discounts and facilities on our product and seminars.	<br><br>
+<br><br><strong>What about Prerequisites?</strong><br><br>
+•	Second to final year student.<br><br>
+•	Strong interpersonal skills.<br><br>
+•	Involvement in campus life (extracurricular activities, student organizations).<br>
+•	‏Passion for learning, creativity, innovation and information-sharing.<br><br>
+•	A basic knowledge about leadership development (what is leadership, how it influences lives).<br><br>
+Students having strong leadership and immense love for entrepreneurship and business, are most welcome to be a part of our extended family on their university.<br><br>
+<br><br><strong>Sounds Great ! How Do I Apply?</strong><br><br>
+•	Make sure to fill in the enquiry form, with subject "Student Ambassador"<br><br>
+•	You will hear from Awesome Firms for an interview.<br><br>
+•	We will intimate you once shortlisted.<br><br><br><br><br><br>
+
+Questions? Email <a href="mailto:pooja@awesomefirms.com" >pooja@awesomefirms.com</a><br><br>
+May the odds be ever in your favour!
 
             </p>
         </div>
 
 
 
-        <div class="limiter">
-            <div class="container-table100">
-                <div class="wrap-table100">
-                    <div class="table">
-
-                        <div class="row header">
-                            <div class="cell">
-                                Management Level
-                            </div>
-                            <div class="cell">
-                                Typical AGC (USD p.a.)
-                            </div>
-                            <div class="cell">
-                                Typical Titles
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="cell" data-title="ManTypical AGC (USD p.a.)	ment Level">
-                                Senior ManTypical AGC (USD p.a.) mnt Level 1
-                            </div>
-                            <div class="cell" data-title="Typical AGC (USD p.a.)	">
-                                $300K-$600K
-                            </div>
-                            <div class="cell" data-title="Typical Titles">
-                                Directors (Not a board member), General Managers, VP's, SVP's, Partners
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="cell" data-title="Management Level">
-                                Senior Managemnt Level 2
-                            </div>
-                            <div class="cell" data-title="Typical AGC (USD p.a.)	">
-                                $600K-$1MM
-                            </div>
-                            <div class="cell" data-title="Job Title">
-                                Directors (Not a board member), General Managers, VP's, SVP's, Partners
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="cell" data-title="Management Level">
-                                Executive Leadership Level-1
-                            </div>
-                            <div class="cell" data-title="Typical AGC (USD p.a.)	">
-                                $1MM-$2.5MM
-                            </div>
-                            <div class="cell" data-title="Job Title">
-                                SVP,GVP,EVP,Managing Directors, Senior Partners
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="cell" data-title="Management Level">
-                                Executive Leadership Level-2
-                            </div>
-                            <div class="cell" data-title="Typical AGC (USD p.a.)	">
-                                $2.5MM-$5MM
-                            </div>
-                            <div class="cell" data-title="Job Title">
-                                President,CIO,COO,CFO,CHRO,CTO,CRO, Senior MD's, Managing Partners
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="cell" data-title="Management Level">
-                                Executive board Level-1
-                            </div>
-                            <div class="cell" data-title="Typical AGC (USD p.a.)	">
-                                $5MM-$10MM
-                            </div>
-                            <div class="cell" data-title="Job Title">
-                                Chairman, Vice-Chairman, CEO, Group Executive Officers
-                            </div>
-
-                        </div>
-
-                        <div class="row">
-                            <div class="cell" data-title="Management Level">
-                                Executive board Level-2
-                            </div>
-                            <div class="cell" data-title="Typical AGC (USD p.a.)	">
-                                >>$10MM
-                            </div>
-                            <div class="cell" data-title="Job Title">
-                                Chairman, Vice-Chairman, CEO, Group Executive Officers
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="cons">
-            <p>
-                Our consulting focus primarily targets partnering select clients, across select industries &
-                geographies, seeking results driven expert counsel in addressing executive talent acquisition challenges
-                at the Senior Management, Executive Leadership & Executive
-                Board levels, for positions offering a Minimum Annual Gross Compensation of $300K p.a. (Across all our
-                focus geographies.)
-            </p><br><br>
-            <p>
-                If you are a prospective client executive interested in exploring / retaining our counsel, kindly
-                <a href="http://www.theelitists.com/ProspectiveClients.aspx"> <b><button class="b1">Apply here</button> </b></a>
-            </p><br><br>
-            <p> If you are a Senior Executive who matches
-                <a href="http://www.theelitists.com/ExecutiveCareers.aspx"><b><button class="b1">our expectations</button></b></a>&nbsp;but are not
-                yet in our relationship network, we invite you to connect with us after reviewing this site in detail.
-            </p><br><br>
-            <p>
-                If you are a potential colleague exploring career opportunities with The Elitists, kindly <a
-                    href="http://www.theelitists.com/JoiningUs.aspx"><b><button class="b1">Apply here.</button></b></a>
-            </p><br><br>
-        </div>
 
         <div id="footer">
             <div class="padding"> Copyright © 2012
