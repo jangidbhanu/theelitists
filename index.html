@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>Home</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <style>
         @import url('https://fonts.googleapis.com/css?family=Nunito');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 @import url('https://fonts.googleapis.com/css?family=Rammetto+One');
 @import url('https://fonts.googleapis.com/css?family=Raleway');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC:900');
+@import url('https://fonts.googleapis.com/css?family=Merriweather&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 @import url('https://fonts.googleapis.com/css?family=Lobster|Lobster+Two&display=swap');
 
@@ -26,23 +27,38 @@ html, body {
 }
 
 body {
-    background: #eaeaea;
+    background: #f8f8f8;
 }
 
+
 .name {
-    font-family: Playfair Display SC;
+    font-family: Merriweather;
     font-size: 36px;
-    
     position: absolute;
     text-align: left;
     color: white;
-    top: 100px;
-    margin-left: 50px;
+    top: 35px;
+    margin-left: 20px;
 }
-
+.au {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 45px;
+    font-family: sans-serif;
+}
+.au:after {
+    content: "";
+    display: block;
+    height: 4px;    
+    width: 40px;
+    box-align: center;
+    background-color: #ffc100;
+    margin-top: 20px;
+    margin-left: 600px;
+}
 .cover {
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     background-image: url("bg.jpg");
     background-size: cover;
     background-attachment: fixed;
@@ -70,6 +86,7 @@ body {
 .line p {
     position: absolute;
     top: 380px;
+    color: white;
     font-family: Lobster;
     right: 50%;
     font-size: 30px;
@@ -146,7 +163,7 @@ body {
     margin-right: 135px;
     text-align: center;
     box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.55);
-    font-family: ubuntu;
+    font-family: Merriweather;
     background-color: white;
     color: #0c2b4c;
     border-radius: 10px;
@@ -165,12 +182,14 @@ body {
     left: 0;
     position: absolute;
     font-size: 16px;
-    top: 750px;
+    top: 740px;
+    font-family: Merriweather;
     width: 60%;
     text-align: justify;
     font-weight: 100;
     margin-left: 20%;
     margin-right: 10%;
+    color: rgb(54, 54, 54);
 }
 
 .d1 {
@@ -181,6 +200,7 @@ body {
     width: 30%;
     height: 40%;
     display: none;
+    
     left: 50px;
     top: 800px;
 }
@@ -189,11 +209,13 @@ body {
     left: 0;
     position: absolute;
     font-size: 16px;
-    top: 850px;
+    top: 1000px;
     width: 60%;
     text-align: justify;
     font-weight: 100;
+    font-family: Merriweather;
     margin-left: 20%;
+    color: rgb(54, 54, 54);;
     margin-right: 10%;
 }
 
@@ -204,20 +226,23 @@ body {
     border-radius: 15px;
     width: 45%;
     height: 80%;
+    color: rgb(54, 54, 54);;
     right: 50px;
     top: 1350px;
 }
 
 .p3 {
+    font-family: Merriweather;
     left: 0;
     position: absolute;
     font-size: 16px;
-    top: 1050px;
+    top: 1280px;
     width: 60%;
     text-align: justify;
     font-weight: 100;
     margin-left: 20%;
     margin-right: 10%;
+    color: rgb(54, 54, 54);;
 }
 
 .d3 {
@@ -235,12 +260,14 @@ body {
     left: 0;
     position: absolute;
     font-size: 16px;
-    top: 1270px;
+    top: 1950px;
     width: 60%;
+    color: rgb(54, 54, 54);;
     text-align: justify;
     font-weight: 100;
     margin-left: 20%;
     margin-right: 10%;
+    font-family: Merriweather;
 }
 
 .d4 {
@@ -280,7 +307,7 @@ body {
     font-size: 90%;
     padding: 0;
     position: absolute;
-    top: 2300px;
+    top: 3900px;
     height: 90px;
     width: 100%;
     left: 0;
@@ -288,6 +315,7 @@ body {
 }
 
 #footer .padding {
+    color: white;
     padding: 10px 0px 0px 0px;
 }
 
@@ -298,12 +326,14 @@ body {
 }
 
 * {
+    color: black;
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
 a {
+    color: darkgoldenrod;
     margin: 0px;
     transition: all 0.4s;
     -webkit-transition: all 0.4s;
@@ -682,50 +712,86 @@ iframe {
             AWESOME FIRMS - CAMPUS AMBASSADOR PROGRAM
 
         </h2>
+    </div>
         <!-- <div class="d1"></div> -->
-        <div class="parag">
+      <h3 class="au">About Us</h3>
+        <div class="parag"> <div class="light">
             <p class="p1">
-                Awesome Firms, an IIM alumni venture, is a leadership development platform that helps ambitious high performers become future leaders in their chosen areas.
+                    Awesome Firms is in the process of building a new platform designed to help students & working professionals develop their leadership skills & evolve themselves to Senior Management/Executive Level Roles (while earning top-tier compensation). 
+                    <br>Towards this, we are building an inaugural cohort of Campus Ambassadors / Student Partners to evangelize the concept of building fast track careers students love by developing their leadership skills.
+                    
 
-            </p>
+            </p></div>
             <!-- <div class="d2"></div> -->
             <p class="p2">
-                <strong>Apply for Student Ambassador :</strongA></strong><br><br>
-                The Awesome Firms student Ambassador Program recognizes hard-working, motivated and enthusiastic individuals by giving them the opportunity to represent Awesome Firms on their university campus. Awesome Firms Student Ambassadors are current students who act as a link between the University and the outside world. They use their own experiences to give people in University life an idea of what it is like to be associate oneself beyond the university life and gives a sneak peek into the world of industry at larger view.
-                
+                <b>Applying for our Campus Ambassador Program :</b><br><br>
+                The Awesome Firms Student Ambassador Program recognizes hard-working, motivated and enthusiastic individuals by giving them an opportunity to represent Awesome Firms on their university campus. <br>
+                We are looking for partners across India & multiple Student Partners can be accepted from the same institution.<br><br>
+                If you are passionate about Leadership Development and/or becoming a highly respected business leader in the future & have the capability to be able to evangelize this across the student community, we invite you to review the details below & apply.
+
 
             </p>
 
             <!-- <div class="d3"></div> -->
             <p class="p3">
-               <strong> Student Ambassadors play a vital support role such as:</strong><br><br>
-                •	Leading & representing the college campus to the industry, and shoulder the responsibility of making this planet a better and a smarter place!<br><br>
-                •	Sharing their experiences with students and motivating them to be part of the venture on various activities.
-                This program also provides the Student Ambassador with an excellent opportunity to gain valuable work experience and sharpen your skills such as communication, collaboration, team work and working with specialists in the field of Leadership Development, we feel in today's collaborative environment, there needs to be a platform where like minds can come together on a common forum to discuss, debate, and exchange ideas on various tools and strategies.
+               <strong> Work Profile: </strong><br>
+               <br>    •	Help students develop themselves to be able to evolve into a Director/Higher level role within 10-15 years of graduation while earning over 1Cr per annum in India or over $250,000 if they are building their careers in the United States.<br>
+               <br>•	Guide your peers in associating themselves beyond the university life and gain a sneak peek into the expansive world of business.<br>
+               <br>•	Organizing Workshops/Seminars on Strategic Career Management, designed to help students them identify & build fast track careers they love<br>
+               <br><strong>•	Ideate on and execute innovative campaign plans<br>
+                <br>•	Work on live marketing projects for the brand<br></strong>
+               <br>•	Encourage your peers to enrol in our precision cast, transformational programs, delivered by experts in their fields      <br>
+               <br>•	Represent LeaderClasses in your College Fest/Fair<br>
+               <br>•	Promoting LeaderClasses on the College Social Media Pages<br>
+               <br><strong>•	Strategize and drive Word of Mouth in campus events and activities<br></strong>
+               <br>•	Regularly introduce new platform features in your campus<br>
+               <br>•	Help LeaderClasses understand your campus culture by serving as the liaison between us & your university<br>
+               <br>•	Share your experiences, build relationships on campus with the faculty & student groups<br>
+               
             </p>
             <!-- <div class="d4"></div> -->
             <p class="p4">
-                <br><br><strong>What Awesome Firms has planned for you?</strong><br><br>
-•	Develop valuable leadership, communication and project management skills.<br><br>
-•	Start to grow your professional network.<br><br>
-•	See your creativity, innovation and BIG ideas come to fruition on campus.<br><br>
+                <br><strong>Eligibility Criteria: </strong><br><br>
+•	A motivated & proactive final/pre-final year student across any department passionate about Leadership Development.<br><br>
+•	Passion for learning, creativity, innovation and information-sharing.<br><br>
+•	Strong Inter-personal, Marketing & Communication Skills<br><br>
 •	Be an integral part of campus spirit, learning and information-sharing.<br><br>
-•	A opportunity to work closely with a person having 22 years of experience in the field of entrepreneurship and start-up and explore it’s depths. <br><br>
-•	Many special discounts and facilities on our product and seminars.	<br><br>
-<br><br><strong>What about Prerequisites?</strong><br><br>
-•	Second to final year student.<br><br>
-•	Strong interpersonal skills.<br><br>
-•	Involvement in campus life (extracurricular activities, student organizations).<br>
-•	‏Passion for learning, creativity, innovation and information-sharing.<br><br>
-•	A basic knowledge about leadership development (what is leadership, how it influences lives).<br><br>
+•	Able to plan events and manage a budget <br><br>
+•	Actively involved in student life on campus – Extra-curriculars, Student Organizations. 	<br><br><br>
 Students having strong leadership and immense love for entrepreneurship and business, are most welcome to be a part of our extended family on their university.<br><br>
-<br><br><strong>Sounds Great ! How Do I Apply?</strong><br><br>
-•	Make sure to fill in the enquiry form, with subject "Student Ambassador"<br><br>
-•	You will hear from Awesome Firms for an interview.<br><br>
-•	We will intimate you once shortlisted.<br><br><br><br><br><br>
 
-Questions? Email <a href="mailto:pooja@awesomefirms.com" >pooja@awesomefirms.com</a><br><br>
-May the odds be ever in your favour!
+
+
+<br><br><strong>Time Commitment:</strong><br><br>
+6 month transformational work-from-college program to help students build fast-track careers while evangelizing Leadership Development.<br><br>
+4-8 hours per week depending on your schedule<br><br>
+4-6 events per year
+
+<br><br><br>
+<strong>Stipend:</strong><br><br>
+Performance based Financial Incentives – Will be discussed in detail with successful candidates before onboarding.<br><br><br><br>
+
+<strong>Rewards & Certificates:</strong><br><br>
+•	Exceptional Learning Experience & a unique opportunity to be a part of a fast growing early stage venture, while working closely with the Founder, an experienced IIML Alumnus & a serial entrepreneur.<br><br>
+•	An opportunity to hone your Leadership skills by gaining exposure across the fields of Intrapreneurship, Strategy, Marketing, Digital and Business Development.<br><br>
+•	Working with specialists in the field of Leadership Development<br><br>
+•	Get a head start in growing your professional network.<br><br>
+•	See your creativity, innovation and BIG ideas come to fruition on campus<br><br>
+•	A prestigious certificate <br><br>
+•	A nice star in your resume which gives you an edge over many in interviews, pool campus, etc.<br><br>
+•	Performance-based financial incentives<br><br>
+•	Exchange best practices with <strong>other like-minded</strong> Ambassadors from other schools and disciplines<br><br>
+•	Preferential Access to LeaderClasses<br><br>
+•	Opportunity to attend our Live events at special prices<br><br>
+•	Opportunities for the best performers for full-time employment with us <br><br>
+
+<br><br><strong>Sounds Great ! How Do I Apply?</strong><br><br>
+1)	Fill our Student Ambassador Form @  <a href="https://awesomefirms.com/campusambassador">here</a><br><br>
+2)  Your form will be assessed on multiple parameters. If you meet our high bar, you will soon hear from Awesome Firms for an interview.<br><br>
+3)	You will be required to finish a small task to help us analyse  your strengths <br><br>
+4)	Once you check out on all parameters, we would love to welcome you aboard & get started !.<br><br><br><br>
+
+<strong>For more information, <a href="mailto:contactus@awesomefirms.com"> Contact Us.</a> Please mention your inquiry in the subject line at the time of mailing us. </strong>
 
             </p>
         </div>
