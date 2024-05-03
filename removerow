@@ -1,0 +1,51 @@
+import org.apache.poi.ss.usermodel.*;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class DeleteEmptyRowsInExcel {
+
+    public static void main(String[] args) {
+        String filePath = "path/to/your/excel/file.xlsx";
+        deleteEmptyRows(filePath);
+    }
+
+    public static void deleteEmptyRows(String filePath) {
+        try {
+            FileInputStream fileInputStream = new FileInputStream(new File(filePath));
+            Workbook workbook = WorkbookFactory.create(fileInputStream);
+            Sheet sheet = workbook.getSheetAt(0); // Assuming you are working with the first sheet
+
+            for (int i = sheet.getLastRowNum(); i >= 0; i--) {
+                Row row = sheet.getRow(i);
+                if (row == null || isRowEmpty(row)) {
+                    sheet.removeRow(row);
+                }
+            }
+
+            fileInputStream.close();
+
+            // Write the changes back to the Excel file
+            FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+            workbook.write(fileOutputStream);
+            fileOutputStream.close();
+
+            workbook.close();
+            System.out.println("Empty rows deleted successfully.");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static boolean isRowEmpty(Row row) {
+        for (int i = row.getFirstCellNum(); i < row.getLastCellNum(); i++) {
+            Cell cell = row.getCell(i);
+            if (cell != null && cell.getCellType() != CellType.BLANK) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
