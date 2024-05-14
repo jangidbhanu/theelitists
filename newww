@@ -1,13 +1,39 @@
-     // Fetching HTML content from a URL
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class HtmlToExcel {
+    public static void main(String[] args) {
+        try {
+            // Fetching HTML content from a URL
             Document doc = Jsoup.connect("http://example.com").get();
 
             // Creating a new Excel workbook
             Workbook workbook = new XSSFWorkbook();
             Sheet sheet = workbook.createSheet("HTML Data");
 
+            // Fetching data from span tags
+            Elements spanTags = doc.select("span");
+            int rowNum = 0;
+            for (Element span : spanTags) {
+                Row excelRow = sheet.createRow(rowNum++);
+                Cell excelCell = excelRow.createCell(0);
+                excelCell.setCellValue(span.text());
+                // Making cells bold
+                Font font = workbook.createFont();
+                font.setBold(true);
+                CellStyle style = workbook.createCellStyle();
+                style.setFont(font);
+                excelCell.setCellStyle(style);
+            }
+
             // Fetching data from table tags
             Elements tableTags = doc.select("table");
-            int rowNum = 0;
             for (Element table : tableTags) {
                 // Assuming table has rows and cells
                 Elements rows = table.select("tr");
@@ -33,3 +59,11 @@
             workbook.write(fileOut);
             fileOut.close();
             workbook.close();
+
+            System.out.println("Excel file created successfully.");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
