@@ -1,42 +1,35 @@
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
-import java.io.IOException;
-
-public class HtmlParser {
-    public static void main(String[] args) {
-        try {
-            // Fetching HTML content from a URL
+     // Fetching HTML content from a URL
             Document doc = Jsoup.connect("http://example.com").get();
-            
-            // Fetching data from span tags
-            Elements spanTags = doc.select("span");
-            for (Element span : spanTags) {
-                System.out.println("Span tag content: " + span.text());
-            }
-            
+
+            // Creating a new Excel workbook
+            Workbook workbook = new XSSFWorkbook();
+            Sheet sheet = workbook.createSheet("HTML Data");
+
             // Fetching data from table tags
             Elements tableTags = doc.select("table");
+            int rowNum = 0;
             for (Element table : tableTags) {
                 // Assuming table has rows and cells
                 Elements rows = table.select("tr");
                 for (Element row : rows) {
+                    Row excelRow = sheet.createRow(rowNum++);
+                    int cellNum = 0;
                     Elements cells = row.select("td");
                     for (Element cell : cells) {
-                        System.out.println("Table cell content: " + cell.text());
+                        Cell excelCell = excelRow.createCell(cellNum++);
+                        excelCell.setCellValue(cell.text());
+                        // Making cells bold
+                        Font font = workbook.createFont();
+                        font.setBold(true);
+                        CellStyle style = workbook.createCellStyle();
+                        style.setFont(font);
+                        excelCell.setCellStyle(style);
                     }
                 }
             }
-            
-            // Fetching data from hyperlink tags
-            Elements linkTags = doc.select("a[href]");
-            for (Element link : linkTags) {
-                System.out.println("Hyperlink URL: " + link.attr("href"));
-                System.out.println("Hyperlink text: " + link.text());
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-}
+
+            // Writing to Excel file
+            FileOutputStream fileOut = new FileOutputStream("html_data.xlsx");
+            workbook.write(fileOut);
+            fileOut.close();
+            workbook.close();
