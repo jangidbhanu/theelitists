@@ -1,4 +1,49 @@
 <!DOCTYPE html>
+# Input string to encrypt
+$plainText = "Secret Message"
+
+# Password to derive encryption key
+$password = "MyStrongPassword"
+
+# Generate a 256-bit AES key from the password using SHA256
+$sha256 = [System.Security.Cryptography.SHA256]::Create()
+$key = $sha256.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($password))
+
+# Create AES object
+$aes = [System.Security.Cryptography.Aes]::Create()
+$aes.Key = $key
+$aes.Mode = [System.Security.Cryptography.CipherMode]::CBC
+$aes.Padding = [System.Security.Cryptography.PaddingMode]::PKCS7
+
+# Generate a random IV (Initialization Vector)
+$aes.GenerateIV()
+$iv = $aes.IV
+
+# Encrypt the plaintext
+$encryptor = $aes.CreateEncryptor()
+$plainBytes = [System.Text.Encoding]::UTF8.GetBytes($plainText)
+$encryptedBytes = $encryptor.TransformFinalBlock($plainBytes, 0, $plainBytes.Length)
+
+# Combine IV + Encrypted bytes for storage/transmission
+$combinedBytes = $iv + $encryptedBytes
+$base64Encrypted = [Convert]::ToBase64String($combinedBytes)
+Write-Host "Encrypted (Base64): $base64Encrypted"
+
+# -------- Decryption --------
+# Convert from Base64
+$combinedBytes = [Convert]::FromBase64String($base64Encrypted)
+
+# Extract IV and encrypted data
+$iv = $combinedBytes[0..15]
+$encryptedBytes = $combinedBytes[16..($combinedBytes.Length - 1)]
+
+# Set AES with same key and extracted IV
+$aes.IV = $iv
+$decryptor = $aes.CreateDecryptor()
+$decryptedBytes = $decryptor.TransformFinalBlock($encryptedBytes, 0, $encryptedBytes.Length)
+$decryptedText = [System.Text.Encoding]::UTF8.GetString($decryptedBytes)
+
+Write-Host "Decrypted text: $decryptedText"
 <html>
 # Base64 encoded string (input)
 $base64String = "SGVsbG8gd29ybGQ="  # Example: "Hello world"
