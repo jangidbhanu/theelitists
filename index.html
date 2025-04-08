@@ -1,3 +1,77 @@
+function Encrypt-DbConnectionString {
+    param (
+        [string]$connString,
+        [string]$password
+    )
+
+    # Derive AES key from password using SHA256
+    $sha256 = [System.Security.Cryptography.SHA256]::Create()
+    $key = $sha256.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($password))
+
+    # Setup AES
+    $aes = [System.Security.Cryptography.Aes]::Create()
+    $aes.Key = $key
+    $aes.Mode = 'CBC'
+    $aes.Padding = 'PKCS7'
+    $aes.GenerateIV()
+    $iv = $aes.IV
+
+    # Encrypt connection string
+    $encryptor = $aes.CreateEncryptor()
+    $plainBytes = [System.Text.Encoding]::UTF8.GetBytes($connString)
+    $cipherBytes = $encryptor.TransformFinalBlock($plainBytes, 0, $plainBytes.Length)
+
+    # Combine IV and cipher for storage
+    $result = $iv + $cipherBytes
+    $base64 = [Convert]::ToBase64String($result)
+
+    return $base64
+}
+
+function Decrypt-DbConnectionString {
+    param (
+        [string]$encryptedBase64,
+        [string]$password
+    )
+
+    # Decode Base64
+    $combinedBytes = [Convert]::FromBase64String($encryptedBase64)
+
+    # Derive AES key from password using SHA256
+    $sha256 = [System.Security.Cryptography.SHA256]::Create()
+    $key = $sha256.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($password))
+
+    # Extract IV (first 16 bytes) and ciphertext
+    $iv = $combinedBytes[0..15]
+    $cipherBytes = $combinedBytes[16..($combinedBytes.Length - 1)]
+
+    # Setup AES
+    $aes = [System.Security.Cryptography.Aes]::Create()
+    $aes.Key = $key
+    $aes.IV = $iv
+    $aes.Mode = 'CBC'
+    $aes.Padding = 'PKCS7'
+
+    # Decrypt
+    $decryptor = $aes.CreateDecryptor()
+    $plainBytes = $decryptor.TransformFinalBlock($cipherBytes, 0, $cipherBytes.Length)
+    $plainText = [System.Text.Encoding]::UTF8.GetString($plainBytes)
+
+    return $plainText
+}
+
+# Example usage
+$connectionString = "Server=myServer;Database=myDB;User Id=admin;Password=pass123;"
+$password = "MySecurePassword"
+
+# Encrypt
+$encrypted = Encrypt-DbConnectionString -connString $connectionString -password $password
+Write-Host "`nEncrypted Base64:`n$encrypted"
+
+# Decrypt
+$decrypted = Decrypt-DbConnectionString -encryptedBase64 $encrypted -password $password
+Write-Host "`nDecrypted Connection String:`n$decrypted"
+
 <!DOCTYPE html>
 # Input string to encrypt
 $plainText = "Secret Message"
